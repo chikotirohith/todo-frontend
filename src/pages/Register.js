@@ -12,7 +12,8 @@ function Register() {
         console.log("Submitting Registration:", email, password);
   
         try {
-            const response = await fetch("/register", {  
+            const response = await fetch("https://todo-api-wdyb.onrender.com/register", { 
+  
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

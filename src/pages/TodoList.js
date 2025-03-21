@@ -29,7 +29,7 @@ const TodoList = () => {
       }
 
       console.log("Refreshing token...");
-      const response = await axios.post("http://127.0.0.1:10000/refresh", {}, {
+      const response = await axios.post("https://todo-api-wdyb.onrender.com/refresh", {}, {
         headers: { Authorization: `Bearer ${refreshToken}` }
       });
 
@@ -65,7 +65,7 @@ const TodoList = () => {
       }
 
       console.log("Fetching tasks with token:", token);
-      const response = await axios.get("http://127.0.0.1:10000/tasks", {
+      const response = await axios.get("https://todo-api-wdyb.onrender.com/tasks", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`
@@ -121,7 +121,7 @@ const TodoList = () => {
         console.log("Sending request to API:", { task: newTask.trim() });  // ✅ Debug log
 
         const response = await axios.post(
-            "http://127.0.0.1:10000/tasks",
+            "https://todo-api-wdyb.onrender.com/tasks",
             { task: newTask.trim() },  // ✅ No need for JSON.stringify()
             {
                 headers: {
@@ -169,7 +169,7 @@ const TodoList = () => {
         console.log(`Updating task ${taskId} to status: ${!currentStatus}`); 
 
         const response = await axios.put(
-          `http://127.0.0.1:10000/tasks/${taskId}`,
+          `https://todo-api-wdyb.onrender.com/tasks/${taskId}`,
           JSON.stringify({ done: !currentStatus }),  // ✅ Send as JSON string
           {
               headers: {
@@ -202,7 +202,7 @@ const clearAllTasks = async () => {
           return;
       }
 
-      await axios.delete("http://127.0.0.1:10000/tasks/clear", {
+      await axios.delete("https://todo-api-wdyb.onrender.com/tasks/clear", {
           headers: { "Authorization": `Bearer ${token}` }
       });
 
@@ -225,7 +225,7 @@ const clearAllTasks = async () => {
             return;
         }
 
-        const response = await fetch(`http://127.0.0.1:10000/tasks/${taskId}`, {
+        const response = await fetch(`https://todo-api-wdyb.onrender.com/tasks/${taskId}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

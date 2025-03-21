@@ -12,7 +12,9 @@ function Login() {
         console.log("Logging in with:", email, password);
   
         try {
-            const response = await fetch("/login", {  // ✅ Correct API endpoint
+            const response = await fetch("https://todo-api-wdyb.onrender.com/login", { 
+            // ✅ Correct API endpoint
+            
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
