@@ -14,7 +14,7 @@ const ResetPassword = () => {
         }
     
         try {
-            const response = await fetch(`https://todo-api-asz1.onrender.com/reset-password/${token}`, {
+            const response = await fetch('https://todo-api-t7f7.onrender.com/reset-password/${token}', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",  // ✅ Ensure correct JSON format

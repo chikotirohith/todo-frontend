@@ -9,7 +9,7 @@ function ForgotPassword() {
     const handleForgotPassword = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("https://todo-api-wdyb.onrender.com/forgot-password", { 
+            const response = await fetch("https://todo-api-t7f7.onrender.com/forgot-password", { 
 
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

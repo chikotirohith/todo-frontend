@@ -12,7 +12,7 @@ function Register() {
         console.log("Submitting Registration:", email, password);
   
         try {
-            const response = await fetch("https://todo-api-wdyb.onrender.com/register", { 
+            const response = await fetch("https://todo-api-t7f7.onrender.com/register", { 
   
                 method: "POST",
                 headers: {
